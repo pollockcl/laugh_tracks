@@ -1,3 +1,3 @@
 class Special < ActiveRecord::Base
-  has_one :comedian
+  belongs_to :comedian
 end

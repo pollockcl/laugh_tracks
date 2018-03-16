@@ -6,4 +6,8 @@ class Comedian < ActiveRecord::Base
   def self.average_age
     average('age')
   end
+
+  def self.with_specials
+    joins(:specials)
+  end
 end
