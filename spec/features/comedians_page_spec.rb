@@ -14,9 +14,16 @@ RSpec.describe 'As an end-user' do
       end
 
       it 'displays specials' do
+        Comedian.create(name: 'Darth Plagueis the Wise', age: 999)
+        Comedian.create(name: 'Farquad', age: 30)
+        Special.create(name: 'spec1', comedian_id: 1)
+        Special.create(name: 'spec2', comedian_id: 2)
+
         visit '/comedians'
 
         expect(page).to have_content('Specials')
+        expect(page).to have_content('spec1')
+        expect(page).to have_content('spec2')
       end
 
       it 'displays average comedian age' do
