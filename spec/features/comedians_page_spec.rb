@@ -12,6 +12,13 @@ RSpec.describe 'As an end-user' do
         expect(page).to have_content('Farquad')
         expect(page).to have_content('999')
       end
+
+      it 'displays specials' do
+        visit '/comedians'
+
+        expect(page). to have_content('Specials')
+        
+      end
     end
   end
 end
