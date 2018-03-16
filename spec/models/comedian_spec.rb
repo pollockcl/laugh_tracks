@@ -36,3 +36,14 @@ RSpec.describe 'When using CRUD' do
     end
   end
 end
+
+describe 'class methods' do
+  describe '.average age' do
+    it 'gives an average age' do
+      Comedian.create(name: 'Darth Plagueis the Wise', age: 1000)
+      Comedian.create(name: 'Farquad', age: 30)
+
+      expect(Comedian.average_age).to eq(515)
+    end
+  end
+end
