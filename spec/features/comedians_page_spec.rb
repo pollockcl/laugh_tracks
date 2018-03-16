@@ -16,8 +16,7 @@ RSpec.describe 'As an end-user' do
       it 'displays specials' do
         visit '/comedians'
 
-        expect(page). to have_content('Specials')
-        
+        expect(page).to have_content('Specials')
       end
     end
   end
