@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Comedians</title>
+
+  </head>
+  <body>
+    <h1>Comedians</h1>
+    <table>
+
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+
+      <% comedians.each do |comedian| %>
+
+      <tr>
+        <td><%= comedian.name %></td>
+        <td><%= comedian.age %></td>
+      </tr>
+
+    </table>
+
+  </body>
+</html>
