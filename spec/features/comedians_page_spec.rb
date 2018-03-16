@@ -18,6 +18,15 @@ RSpec.describe 'As an end-user' do
 
         expect(page).to have_content('Specials')
       end
+
+      it 'displays average comedian age' do
+        Comedian.create(name: 'Darth Plagueis the Wise', age: 1000)
+        Comedian.create(name: 'Farquad', age: 30)
+        visit '/comedians'
+
+        expect(page).to have_content('Average Age:')
+        expect(page).to have_content('515')
+      end
     end
   end
 end
